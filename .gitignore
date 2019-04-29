@@ -1,0 +1,7 @@
+*.set
+__pycache__/
+venv/ 
+.idea 
+*.pyc
+garbages_paths.yml
+

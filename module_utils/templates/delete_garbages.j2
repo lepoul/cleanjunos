@@ -1,0 +1,23 @@
+{% for p in garbages['prefix_lists'] -%}
+delete policy-options prefix-list {{ p }}
+{% endfor %}
+
+{% for f in garbages['firewalls4'] -%}
+delete firewall family inet filter {{ f }}
+{% endfor %}
+
+{% for f in garbages['firewalls6'] -%}
+delete firewall family inet6 filter {{ f }}
+{% endfor %}
+
+{% for c in garbages['communities'] -%}
+delete policy-options community {{ c }}
+{% endfor %}
+
+{% for p in garbages['policies'] -%}
+delete policy-options policy-statement {{ p }}
+{% endfor %}
+
+{% for asp in garbages['as_paths'] -%}
+delete policy-options as-path {{ asp }}
+{% endfor %}
